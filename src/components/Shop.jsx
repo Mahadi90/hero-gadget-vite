@@ -1,9 +1,19 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import ProductCard from './Cards/ProductCard';
 
 const Shop = () => {
+
+   const productsData = useLoaderData();
+
     return (
-        <div>
-            <h2 className='text-3xl text-center text-red-600'>This is shop section</h2>
+        <div className='product-container'>
+            {
+                productsData.map(product => <ProductCard
+                key={product.id}
+                product={product}
+                />)
+            }
         </div>
     );
 };
