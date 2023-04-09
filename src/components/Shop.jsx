@@ -9,7 +9,7 @@ const Shop = () => {
 
 //    handle add to cart
 const handleAddToCart = id =>{
-    console.log(id)
+    // console.log(id)
     addToDb(id)
 }
 
