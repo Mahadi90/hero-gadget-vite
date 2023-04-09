@@ -1,10 +1,14 @@
 import React from 'react';
-import { getDataFromDb } from './components/Cards/utils/fakeDb';
+
+import { useLoaderData } from 'react-router-dom';
 
 const Cart = () => {
 
-   const cart = getDataFromDb();
-   console.log(cart)
+    const cartArray = useLoaderData()
+
+   console.log(cartArray)
+
+
 
     return (
         <div>
